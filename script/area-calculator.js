@@ -43,3 +43,11 @@ document.getElementById('parallelogram-calculate').addEventListener('click', fun
     const calculation = base * height;
     setElement('parallelogram-area', calculation)
 })
+
+// ellipse 
+document.getElementById('ellipse-calculate').addEventListener('click', function() {
+    const roundFrist = getInputElement('ellipse-frist-area')
+    const roundSecond = getInputElement('ellipse-second-area')
+    const calculation =  (Math.PI*roundFrist*roundSecond).toFixed(2)
+    setElement('ellipse-area', calculation)
+})
