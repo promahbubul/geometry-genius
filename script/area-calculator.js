@@ -75,6 +75,30 @@ document
     itemAdded("ellipse", calculation);
   });
 
+// Rhombus
+document.getElementById('diagonal-calculate').addEventListener('click', function() {
+  const diagonalOne = getInputElement('diagonal-one')
+  const diagonalTwo = getInputElement('diagonal-two')
+  if(isNaN(diagonalOne) || isNaN(diagonalTwo)) {
+    return alert('Please input number only')
+  }
+  const calculate = 0.5 * diagonalOne * diagonalTwo
+  setElement('rhombus-area', calculate)
+  itemAdded('rhombus', calculate)
+})
+
+// Pentagon
+document.getElementById('Pentagon-calculate').addEventListener('click', function() {
+  const base = getInputElement('Pentagon-base')
+  const height = getInputElement('Pentagon-height')
+  if(isNaN(base) || isNaN(height)) {
+    return alert('Please input number only')
+  } 
+  const calculate = 0.5 * base * height;
+  setElement('Pentagon-area', calculate)
+  itemAdded('pentagon',  calculate)
+})
+
 // add to calculation entry
 function itemAdded(areaName, area) {
   const itemContainer = document.getElementById("calculate-container");

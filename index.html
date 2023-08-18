@@ -18,9 +18,11 @@
     <!-- Main -->
     <main class="w-[96%] mx-auto mt-28">
       <!-- Container -->
-      <div class="flex flex-row gap-5">
+      <div class="flex flex-col md:flex-row lg:flex-row gap-5">
         <!-- Shape Container -->
-        <div class="grid grid-cols-3 gap-6 justify-around w-full flex-1">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full md:w-8/12 lg:w-9/12 justify-around flex-1"
+        >
           <!-- Triangle -->
           <div class="card w-full bg-base-100 border border-gray-200">
             <figure class="p-5">
@@ -35,14 +37,14 @@
                 <input
                   id="traingle-base"
                   placeholder="b"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
                 <input
                   id="traingle-height"
                   placeholder="h"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
@@ -78,14 +80,14 @@
                 <input
                   id="rectangle-width"
                   placeholder="b"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
                 <input
                   id="rectangle-length"
                   placeholder="h"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
@@ -121,14 +123,14 @@
                 <input
                   id="parallelogram-base"
                   placeholder="b"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
                 <input
                   id="parallelogram-height"
                   placeholder="h"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
@@ -162,16 +164,16 @@
               <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
               <div class="text-center space-x-1">
                 <input
-                  id="rhombus-base"
+                  id="diagonal-one"
                   placeholder="d1"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
                 <input
-                  id="rhombus-height"
+                  id="diagonal-two"
                   placeholder="d2"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
@@ -185,7 +187,7 @@
               </p>
               <div class="card-actions justify-end">
                 <button
-                  id="rhombus-calculate"
+                  id="diagonal-calculate"
                   class="btn text-white w-full hover:bg-blue-500 bg-[#1090D8]"
                 >
                   Calculate
@@ -207,14 +209,14 @@
                 <input
                   id="Pentagon-base"
                   placeholder="p"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
                 <input
                   id="Pentagon-height"
                   placeholder="b"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
@@ -250,14 +252,14 @@
                 <input
                   id="ellipse-frist-area"
                   placeholder="a"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
                 <input
                   id="ellipse-second-area"
                   placeholder="b"
-                  class="w-4/12 rounded-md outline-none p-1 bg-gray-200"
+                  class="w-3/12 rounded-md outline-none p-1 bg-gray-200"
                   type="text"
                 />
                 <span>cm</span>
@@ -281,8 +283,12 @@
           </div>
         </div>
         <!-- Area Calculator -->
-        <div class="w-[300px] border border-gray-200 rounded-2xl p-5">
-          <h3>Area Calculator</h3>
+        <div
+          class="w-full md:w-4/12 lg:w-3/12 border h-96 overflow-auto border-gray-200 rounded-2xl p-5"
+        >
+          <h3 class="text-xl underline font-bold text-center">
+            Area Calculator
+          </h3>
           <div id="calculate-container"></div>
         </div>
       </div>
